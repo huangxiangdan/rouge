@@ -3,11 +3,11 @@ if (false) {
     BK.Script.loadlib('GameRes://libs/qqplay-adapter.js');
 }
 
-window.boot = function () {
+window.boot = function() {
     var settings = window._CCSettings;
     window._CCSettings = undefined;
 
-    if ( !settings.debug ) {
+    if (!settings.debug) {
         var uuids = settings.uuids;
 
         var rawAssets = settings.rawAssets;
@@ -47,13 +47,13 @@ window.boot = function () {
         }
     }
 
-    function setLoadingDisplay () {
+    function setLoadingDisplay() {
         // Loading splash scene
-		
+
         var splash = document.getElementById('splash');
-        
-		/*
-		var progressBar = splash.querySelector('.progress-bar span');
+
+        /*
+        var progressBar = splash.querySelector('.progress-bar span');
         cc.loader.onProgress = function (completedCount, totalCount, item) {
             var percent = 100 * completedCount / totalCount;
             if (progressBar) {
@@ -62,14 +62,14 @@ window.boot = function () {
         };
         splash.style.display = 'block';
         progressBar.style.width = '0%';
-		*/
+        */
 
-        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function () {
+        cc.director.once(cc.Director.EVENT_AFTER_SCENE_LAUNCH, function() {
             splash.style.display = 'none';
         });
     }
 
-    var onStart = function () {
+    var onStart = function() {
         cc.loader.downloader._subpackages = settings.subpackages;
 
         cc.view.enableRetina(true);
@@ -83,16 +83,14 @@ window.boot = function () {
             if (cc.sys.isMobile) {
                 if (settings.orientation === 'landscape') {
                     cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE);
-                }
-                else if (settings.orientation === 'portrait') {
+                } else if (settings.orientation === 'portrait') {
                     cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
                 }
                 cc.view.enableAutoFullScreen([
-                    cc.sys.BROWSER_TYPE_BAIDU,
-                    cc.sys.BROWSER_TYPE_WECHAT,
-                    cc.sys.BROWSER_TYPE_MOBILE_QQ,
-                    cc.sys.BROWSER_TYPE_MIUI,
-                ].indexOf(cc.sys.browserType) < 0);
+                cc.sys.BROWSER_TYPE_BAIDU,
+                cc.sys.BROWSER_TYPE_WECHAT,
+                cc.sys.BROWSER_TYPE_MOBILE_QQ,
+                cc.sys.BROWSER_TYPE_MIUI, ].indexOf(cc.sys.browserType) < 0);
             }
 
             // Limit downloading max concurrent task to 2,
@@ -118,20 +116,20 @@ window.boot = function () {
 
         // load scene
         cc.director.loadScene(launchScene, null,
-            function () {
-                if (cc.sys.isBrowser) {
-                    // show canvas
-                    var canvas = document.getElementById('GameCanvas');
-                    canvas.style.visibility = '';
-                    var div = document.getElementById('GameDiv');
-                    if (div) {
-                        div.style.backgroundImage = '';
-                    }
+
+        function() {
+            if (cc.sys.isBrowser) {
+                // show canvas
+                var canvas = document.getElementById('GameCanvas');
+                canvas.style.visibility = '';
+                var div = document.getElementById('GameDiv');
+                if (div) {
+                    div.style.backgroundImage = '';
                 }
-                cc.loader.onProgress = null;
-                console.log('Success to load scene: ' + launchScene);
             }
-        );
+            cc.loader.onProgress = null;
+            console.log('Success to load scene: ' + launchScene);
+        });
     };
 
     // jsList
@@ -139,20 +137,18 @@ window.boot = function () {
 
     if (false) {
         BK.Script.loadlib();
-    }
-    else {
-        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.db861.js';
+    } else {
+        var bundledScript = settings.debug ? 'src/project.dev.js' : 'src/project.c39b6.js';
         if (jsList) {
-            jsList = jsList.map(function (x) {
+            jsList = jsList.map(function(x) {
                 return 'src/' + x;
             });
             jsList.push(bundledScript);
-        }
-        else {
+        } else {
             jsList = [bundledScript];
         }
     }
-    
+
     var option = {
         id: 'GameCanvas',
         scenes: settings.scenes,
@@ -167,7 +163,7 @@ window.boot = function () {
     cc.game.run(option, onStart);
 };
 
-// main.ce5c2.js is qqplay and jsb platform entry file, so we must leave platform init code here
+// main.18b4d.js is qqplay and jsb platform entry file, so we must leave platform init code here
 if (false) {
     BK.Script.loadlib('GameRes://src/settings.js');
     BK.Script.loadlib();
@@ -180,25 +176,23 @@ if (false) {
     };
     BK.Director.screenMode = ORIENTATIONS[window._CCSettings.orientation];
     initAdapter();
-    cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
+    cc.game.once(cc.game.EVENT_ENGINE_INITED, function() {
         initRendererAdapter();
     });
 
     qqPlayDownloader.REMOTE_SERVER_ROOT = "";
     var prevPipe = cc.loader.md5Pipe || cc.loader.assetLoader;
     cc.loader.insertPipeAfter(prevPipe, qqPlayDownloader);
-    
+
     window.boot();
-}
-else if (window.jsb) {
+} else if (window.jsb) {
     var isRuntime = (typeof loadRuntime === 'function');
     if (isRuntime) {
-        require('src/settings.907e7.js');
+        require('src/settings.654d1.js');
         require('src/cocos2d-runtime.js');
         require('jsb-adapter/engine/index.js');
-    }
-    else {
-        require('src/settings.907e7.js');
+    } else {
+        require('src/settings.654d1.js');
         require('src/cocos2d-jsb.js');
         require('jsb-adapter/jsb-engine.js');
     }
