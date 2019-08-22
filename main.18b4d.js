@@ -103,10 +103,10 @@ window.boot = function() {
 
         // init assets
         cc.AssetLibrary.init({
-            // libraryPath: 'res/import',
-            // rawAssetsBase: 'res/raw-',
-            libraryPath: 'https://cmb-img.fulugame.cn/games/rouge/res/import',
-            rawAssetsBase: 'https://cmb-img.fulugame.cn/games/rouge/res/raw-',
+            libraryPath: 'res/import',
+            rawAssetsBase: 'res/raw-',
+            // libraryPath: 'https://cmb-img.fulugame.cn/games/rouge/res/import',
+            // rawAssetsBase: 'https://cmb-img.fulugame.cn/games/rouge/res/raw-',
             rawAssets: settings.rawAssets,
             packedAssets: settings.packedAssets,
             md5AssetsMap: settings.md5AssetsMap
