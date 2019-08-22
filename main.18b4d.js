@@ -105,7 +105,7 @@ window.boot = function() {
         cc.AssetLibrary.init({
             // libraryPath: 'res/import',
             // rawAssetsBase: 'res/raw-',
-            libraryPath: 'https://cmb-img.fulugame.cn/games/rouge/res/import',
+            libraryPath: 'res/import',
             rawAssetsBase: 'https://cmb-img.fulugame.cn/games/rouge/res/raw-',
             rawAssets: settings.rawAssets,
             packedAssets: settings.packedAssets,

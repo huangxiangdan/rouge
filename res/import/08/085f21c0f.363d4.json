@@ -1,0 +1,78 @@
+[{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "img_lipstick_02",
+    "texture": "2anh8HWq5FoLXmETFj2GkR",
+    "rect": [16, 2, 72, 162],
+    "offset": [-0.5, 12.5],
+    "originalSize": [105, 191],
+    "capInsets": [0, 0, 0, 0]
+  }
+}, [{
+  "__type__": "cc.Prefab",
+  "_name": "lipstick",
+  "data": {
+    "__id__": 1
+  }
+}, {
+  "__type__": "cc.Node",
+  "_name": "lipstick",
+  "_level": 1,
+  "_components": [{
+    "__type__": "cc.Sprite",
+    "node": {
+      "__id__": 1
+    },
+    "_spriteFrame": {
+      "__uuid__": "25/67Jog5FPJLmGhbqbbYd"
+    },
+    "_sizeMode": 2,
+    "_isTrimmedMode": false
+  }, {
+    "__type__": "cc.BoxCollider",
+    "node": {
+      "__id__": 1
+    },
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "y": -38
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 55,
+      "height": 142
+    }
+  }, {
+    "__type__": "5ca342pLNtO56yH5046tYna",
+    "node": {
+      "__id__": 1
+    }
+  }],
+  "_prefab": {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 1
+    },
+    "asset": {
+      "__uuid__": "d8cyq5Ic9AAIVy82hbEeBX"
+    },
+    "fileId": "39RwUoFsNDc7sL0QdPUXHt"
+  },
+  "_contentSize": {
+    "__type__": "cc.Size",
+    "width": 105,
+    "height": 191
+  },
+  "_anchorPoint": {
+    "__type__": "cc.Vec2",
+    "x": 0.5,
+    "y": 0.8
+  },
+  "_scale": {
+    "__type__": "cc.Vec3",
+    "x": 1,
+    "y": 1,
+    "z": 1
+  },
+  "groupIndex": 2
+}]]
