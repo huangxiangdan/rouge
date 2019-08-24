@@ -794,7 +794,7 @@ window.__require = function e(t, n, i) {
             properties: {
                 nodePlate: cc.Node,
                 nodeTouch: cc.Node,
-                nodeLipstick: cc.Node,
+                nodeLipstickModule: cc.Node,
                 prefabLipstick: cc.Prefab,
                 nodeLipstickContainer: cc.Node,
                 txtTime: cc.Label,
@@ -806,7 +806,308 @@ window.__require = function e(t, n, i) {
             },
             onLoad: function() {
                 cc.director.getCollisionManager().enabled = !0,
-                this._levelInfo = i.selectedPrize.censorship,
+                // this._levelInfo = i.selectedPrize.censorship,
+                // this._levelInfo = {"censorshipId": 6,
+                //                     "name": "通关领19积分",
+                //                     "oneLevelDifficultyList": [
+                //                       {
+                //                         "acceleratedSpeed": 3,
+                //                         "createdAt": "2019-07-18 18:29:15",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 16,
+                //                         "id": 64,
+                //                         "probability": 100.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": -450,
+                //                         "updatedAt": "2019-07-18 18:29:15",
+                //                         "updatedBy": null
+                //                       }
+                //                     ],
+                //                     "oneLevelRougeCount": 3,
+                //                     "oneLevelSecond": 30,
+                //                     "secondLevelDifficultyList": [
+                //                       {
+                //                         "acceleratedSpeed": 3,
+                //                         "createdAt": "2019-07-15 17:35:37",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 17,
+                //                         "id": 29,
+                //                         "probability": 50.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": 450,
+                //                         "updatedAt": "2019-07-15 17:35:37",
+                //                         "updatedBy": null
+                //                       },
+                //                       {
+                //                         "acceleratedSpeed": 3,
+                //                         "createdAt": "2019-07-15 17:35:37",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 17,
+                //                         "id": 30,
+                //                         "probability": 50.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": -450,
+                //                         "updatedAt": "2019-07-15 17:35:37",
+                //                         "updatedBy": null
+                //                       }
+                //                     ],
+                //                     "secondLevelRougeCount": 6,
+                //                     "secondLevelSecond": 30,
+                //                     "thirdLevelDifficultyList": [
+                //                       {
+                //                         "acceleratedSpeed": 4,
+                //                         "createdAt": "2019-07-15 17:39:48",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 19,
+                //                         "id": 34,
+                //                         "probability": 30.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": 360,
+                //                         "updatedAt": "2019-07-15 17:39:48",
+                //                         "updatedBy": null
+                //                       },
+                //                       {
+                //                         "acceleratedSpeed": 3,
+                //                         "createdAt": "2019-07-15 17:39:48",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 19,
+                //                         "id": 35,
+                //                         "probability": 30.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": -360,
+                //                         "updatedAt": "2019-07-15 17:39:48",
+                //                         "updatedBy": null
+                //                       },
+                //                       {
+                //                         "acceleratedSpeed": 4,
+                //                         "createdAt": "2019-07-15 17:39:48",
+                //                         "createdBy": null,
+                //                         "deleted": false,
+                //                         "deletedAt": null,
+                //                         "deletedBy": null,
+                //                         "difficultyId": 19,
+                //                         "id": 36,
+                //                         "probability": 40.00,
+                //                         "stayTime": 0.10,
+                //                         "turnAngle": 270,
+                //                         "updatedAt": "2019-07-15 17:39:48",
+                //                         "updatedBy": null
+                //                       }
+                //                     ],
+                //                     "thirdLevelRougeCount": 8,
+                //                     "thirdLevelSecond": 30
+                //                     }
+                this._levelInfo = {
+                "censorshipId": 7,
+                "name": "奖励99积分",
+                "oneLevelDifficultyList": [
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-15 17:36:24",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 18,
+                    "id": 31,
+                    "probability": 30.00,
+                    "stayTime": 0.10,
+                    "turnAngle": 450,
+                    "updatedAt": "2019-07-15 17:36:24",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-15 17:36:24",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 18,
+                    "id": 32,
+                    "probability": 40.00,
+                    "stayTime": 0.10,
+                    "turnAngle": -360,
+                    "updatedAt": "2019-07-15 17:36:24",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-15 17:36:24",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 18,
+                    "id": 33,
+                    "probability": 30.00,
+                    "stayTime": 0.10,
+                    "turnAngle": 450,
+                    "updatedAt": "2019-07-15 17:36:24",
+                    "updatedBy": null
+                  }
+                ],
+                "oneLevelRougeCount": 4,
+                "oneLevelSecond": 30,
+                "secondLevelDifficultyList": [
+                  {
+                    "acceleratedSpeed": 4,
+                    "createdAt": "2019-07-15 18:10:03",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 20,
+                    "id": 37,
+                    "probability": 30.00,
+                    "stayTime": 0.10,
+                    "turnAngle": 360,
+                    "updatedAt": "2019-07-15 18:10:03",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 4,
+                    "createdAt": "2019-07-15 18:10:03",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 20,
+                    "id": 38,
+                    "probability": 30.00,
+                    "stayTime": 0.10,
+                    "turnAngle": -270,
+                    "updatedAt": "2019-07-15 18:10:03",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-15 18:10:03",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 20,
+                    "id": 39,
+                    "probability": 30.00,
+                    "stayTime": 0.10,
+                    "turnAngle": 270,
+                    "updatedAt": "2019-07-15 18:10:03",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-15 18:10:03",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 20,
+                    "id": 40,
+                    "probability": 10.00,
+                    "stayTime": 0.10,
+                    "turnAngle": -450,
+                    "updatedAt": "2019-07-15 18:10:03",
+                    "updatedBy": null
+                  }
+                ],
+                "secondLevelRougeCount": 8,
+                "secondLevelSecond": 30,
+                "thirdLevelDifficultyList": [
+                  {
+                    "acceleratedSpeed": 4,
+                    "createdAt": "2019-07-15 18:11:57",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 22,
+                    "id": 45,
+                    "probability": 10.00,
+                    "stayTime": 0.30,
+                    "turnAngle": 360,
+                    "updatedAt": "2019-07-15 18:11:57",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 4,
+                    "createdAt": "2019-07-15 18:11:57",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 22,
+                    "id": 46,
+                    "probability": 20.00,
+                    "stayTime": 0.00,
+                    "turnAngle": -270,
+                    "updatedAt": "2019-07-15 18:11:57",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 4,
+                    "createdAt": "2019-07-15 18:11:57",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 22,
+                    "id": 47,
+                    "probability": 20.00,
+                    "stayTime": 0.00,
+                    "turnAngle": -180,
+                    "updatedAt": "2019-07-15 18:11:57",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 3,
+                    "createdAt": "2019-07-19 09:02:14",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 22,
+                    "id": 65,
+                    "probability": 30.00,
+                    "stayTime": 0.00,
+                    "turnAngle": 90,
+                    "updatedAt": "2019-07-19 09:02:14",
+                    "updatedBy": null
+                  },
+                  {
+                    "acceleratedSpeed": 2,
+                    "createdAt": "2019-07-19 09:08:45",
+                    "createdBy": null,
+                    "deleted": false,
+                    "deletedAt": null,
+                    "deletedBy": null,
+                    "difficultyId": 22,
+                    "id": 66,
+                    "probability": 20.00,
+                    "stayTime": 0.00,
+                    "turnAngle": 60,
+                    "updatedAt": "2019-07-19 09:08:45",
+                    "updatedBy": null
+                  }
+                ],
+                "thirdLevelRougeCount": 9,
+                "thirdLevelSecond": 30
+              }
                 this._isFlying = !1,
                 this._isOver = !1,
                 this._isPlaying = !1
@@ -867,11 +1168,13 @@ window.__require = function e(t, n, i) {
             startRun: function() {
                 var e = this,
                 t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                console.log("startRun: "+t)
                 if (this.nodePlate.stopAllActions(), this.nodePlate.rotation > 360 && (this.nodePlate.rotation = this.nodePlate.rotation % 360), t) {
                     var n = this.getControl(),
                     r = cc.sequence(cc.delayTime(n.delayTime), cc.rotateBy(n.rotateTime, n.degrees), cc.delayTime(n.stayTime), cc.callFunc(function() {
                         e.startRun()
                     }));
+                    console.log(n.degrees)
                     this.nodePlate.getComponent("Plate").setDirect(n.degrees > 0 ? 1 : -1),
                     this.nodePlate.runAction(r)
                 } else {
@@ -893,13 +1196,13 @@ window.__require = function e(t, n, i) {
                         var t = this.txtTime.string;
                         if (null == t || "0" == t) return
                     }
-                    if (this.nodeLipstick.active) {
+                    if (this.nodeLipstickModule.active) {
                         this._isFlying = !0;
                         var n = function(t) {
                             var n = cc.instantiate(e.prefabLipstick);
-                            n.x = e.nodeLipstick.x,
-                            n.y = e.nodeLipstick.y,
-                            n.parent = e.nodeLipstick.parent,
+                            n.x = e.nodeLipstickModule.x,
+                            n.y = e.nodeLipstickModule.y,
+                            n.parent = e.nodeLipstickModule.parent,
                             n.getComponent("Lipstick").setCallback({
                                 success: function() {
                                     e.onSuccessCallback(),
@@ -914,9 +1217,11 @@ window.__require = function e(t, n, i) {
                             n.runAction(cc.moveTo(.3, 0, e.nodePlate.y)),
                             i.leftLipstick--,
                             e.nodeLipstickContainer.getComponent("LipstickContainer").reload(i.leftLipstick, e.getLevelInfo(i.currentLevel).rougeCount),
-                            i.leftLipstick <= 0 ? e.nodeLipstick.active = !1 : e.nodeLipstick.runAction(cc.sequence(cc.hide(), cc.delayTime(.2), cc.show()))
+                            i.leftLipstick <= 0 ? e.nodeLipstickModule.active = !1 : e.nodeLipstickModule.runAction(cc.sequence(cc.hide(), cc.delayTime(.2), cc.show()))
                         };
-                        i.thrid = Math.random() > 0.3 ? 1 : 0;
+                        i.thrid = 1//Math.random() > 0.3 ? 1 : 0;
+                        console.log(i.thrid)
+                        console.log("leftLipstick: "+i.leftLipstick)
                         3 == i.currentLevel && 2 == i.leftLipstick ? (this.startRun(0 == i.thrid), n(0 != i.thrid)) : n(!0)
                     }
                 }
@@ -930,7 +1235,7 @@ window.__require = function e(t, n, i) {
                     i.hitLipstick = 0,
                     e.setTime(n.second),
                     e.nodePlate.getComponent("Plate").removeAllLipstick(),
-                    e.nodeLipstick.active = n.rougeCount > 0,
+                    e.nodeLipstickModule.active = n.rougeCount > 0,
                     n.second > 0 && e.node.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function() {
                         e.startTimer()
                     }))),
@@ -1102,7 +1407,8 @@ window.__require = function e(t, n, i) {
             },
             start: function() {
                 this.txtLefttime.string = "\u4eca\u65e5\u5269\u4f59\uff1a" + r.lastCount,
-                this.txtTitle.string = r.gameInfo.areaList[0].areaName,
+                // alert(r.gameInfo.areaList[0].areaName)
+                // this.txtTitle.string = r.gameInfo.areaList[0].areaName,
                 c.playMusic("remote/audio/bg"),
                 this.addToggle(),
                 this.reloadAudio()
@@ -1488,7 +1794,9 @@ window.__require = function e(t, n, i) {
                 spriteImage: cc.Sprite
             },
             onLoad: function() {
-                this._defaultSpriteFrame = this.spriteImage.spriteFrame
+                // console.log(cc.Sprite.spriteFrame)
+                // console.log(cc.Sprite)
+                this._defaultSpriteFrame = cc.Sprite.spriteFrame
             },
             start: function() {},
             loadUrl: function(e) {
